@@ -28,7 +28,7 @@ export const AlarmDays = ({onSelectDay}: Props) => {
     <View style={styles.container}>
       {days.map(day => (
         <Pressable
-          key={`day-${day}`}
+          key={`day-${day.id}`}
           onPress={() => onSelect(day)}
           style={dayStyles(selected?.id === day.id)}>
           <Text style={dayTextStyles(selected?.id === day.id)}>{day.desc}</Text>
